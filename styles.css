@@ -1,0 +1,232 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8; /* Fondo blanco/gris */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    background-color: #ffffff; /* Fondo gris oscuro */
+    color: white;
+    padding: 35px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    box-sizing: border-box;
+}
+
+header .logo {
+    position: relative;
+   
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white;
+    background: none;
+    height: auto;
+    width: 200px;
+    bottom: -10px;
+
+}
+
+
+.highlight {
+    color: #ffff; /* Puedes elegir cualquier color que desees */
+}
+
+
+
+
+header p.eslogan {
+    position: relative;
+    font-size: 1.2em;
+    font-style: italic;
+    color: #ff3535; /* Gris claro */
+    bottom: -10px;
+
+    
+    
+}
+
+header img.fuego {
+    width: 50px;
+    height: auto;
+    vertical-align: middle;
+}
+
+header > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+nav {
+    background-color: #000000; /* Gris intermedio */
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+nav a:hover {
+    color: #ddd; /* Gris más claro */
+}
+
+
+
+nav.otro {
+    position: absolute; /* Fija la barra en la parte superior */
+    top: 0; /* Posición superior */
+    left: 0; /* Comienza desde el lado izquierdo */
+    width: 100%; /* Ocupa todo el ancho */
+    height: 10px; /* Altura de la barra (ajústala según lo desees) */
+    background-color: #000000; /* Color de fondo */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Opcional: sombra para mejor apariencia */
+}
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.catalogo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    width: 80%;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.producto {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.producto img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.producto h2 {
+    font-size: 1.5em;
+    margin: 15px 0 10px;
+}
+
+.descripcion {
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.boton-agregar {
+    background-color: #dc143c;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.boton-agregar:hover {
+    background-color: #d35400;
+}
+
+#ver-carrito {
+    position: absolute;
+    top: 100px;
+    right: 25px;
+    width: 60px; /* Tamaño fijo */
+    height: 60px;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+#ver-carrito img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.menu-carrito {
+    display: none;
+    position: fixed;
+    top: 180px;
+    right: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.menu-carrito img {
+    max-width: 80px;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+}
+ 
+.logo img {
+    
+    background: none;    
+}
+
+.eslogan {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+
+
+@media (max-width: 768px) {
+    .catalogo {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
